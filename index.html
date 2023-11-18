@@ -11,6 +11,11 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script
       src="https://kit.fontawesome.com/538f502076.js"
@@ -19,6 +24,69 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
-    <script src="src/js.script"></script>
+    <div class="weather-app">
+      <header>
+        <form class="search-form" id="search-form">
+          <input
+            clas="search-form-input"
+            type="search"
+            placeholder="Enter a city.."
+            required
+            id="search-form-input"
+            class="search-form-input"
+          />
+          <button type="submit" class="btn btn-primary" id="search-form-button">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </header>
+    </div>
+
+    <div class="container text-center" id="weather-app-contents">
+      <h1>Cape Town, South Africa</h1>
+      <div class="row datetime justify-content-end">
+        <div class="col-4">
+          <span class="weather-app-datetime"> Sunday 23:14</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6" id="weather-icon"></div>
+        <div class="col-6 d-flex justify-content-end align-items-center">
+          <div class="weather-temperature">
+            <span>24</span>
+            <span id="celsius">°C</span>
+          </div>
+        </div>
+        <div class="col-12 weather-description">Rain</div>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-6" id="wind-info">
+          <span class="material-symbols-outlined" id="wind-icon">air</span>
+          <span class="wind-text">Wind: 3km/h</span>
+        </div>
+
+        <div class="col-6" id="humidity">
+          <span class="material-symbols-outlined" id="humidity-icon">
+            humidity_percentage
+          </span>
+          <span class="humidity-text">Humidity: 62% </span>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center" id="weather-app-forecast">
+      <div class="row">
+        <div class="col-4">Tue</div>
+        <div class="col-4">🌦️</div>
+        <div class="col-4">
+          <span class="weather-temperature-mini">15° </span
+          ><span class="weather-temperature-max">25° </span>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
   </body>
 </html>

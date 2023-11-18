@@ -1,0 +1,92 @@
+h1 {
+    text-align: center;
+}
+
+
+
+.search-form {
+    padding: 20px;
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.search-form-input {
+    border-radius: 20px;
+    box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+    border-radius: 10px;
+}
+
+.weather-temperature {
+    font-size: 100px;
+}
+
+#celsius {
+    text-align: center;
+    font-size: 88px;
+}
+
+#weather-app-contents {
+    background: white;
+    max-width: 600px;
+    margin: 45px auto;
+    box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+    border-radius: 16px;
+    padding: 30px;
+}
+
+#weather-app-forecast {
+    background: white;
+    max-width: 600px;
+    margin: 45px auto;
+    box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+    border-radius: 16px;
+    padding: 30px;
+}
+
+
+
+#weather-app-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+#humidity {
+    display: flex;
+    align-items: center;
+}
+
+
+#wind-info {
+    display: flex;
+    align-items: center;
+
+}
+
+.humidity-text,
+.wind-text {
+    margin-left: 5px;
+
+}
+
+.weather-temperature {
+    display: flex;
+    align-items: center;
+}
+
+.weather-temperature span {
+    margin-right: 5px;
+
+}
+
+.weather-temperature-max {
+    opacity: 0.6;
+}
