@@ -39,23 +39,38 @@ body {
 
 
 #weather-app-contents {
-    background: white;
+    background-color: white;
     max-width: 600px;
-    margin: 45px auto;
+    margin: 30px auto;
     box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
     border-radius: 16px;
-    padding: 30px;
+    padding: 20px;
+    width: 80%;
 }
 
 #weather-app-forecast {
-    background: white;
+    background-color: white;
     max-width: 600px;
-    margin: 45px auto;
+    margin: 30px auto;
     box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
     border-radius: 16px;
-    padding: 30px;
+    padding: 20px;
     width: 80%;
 
+}
+
+
+@media (max-width: 600px) {
+
+    #weather-app-contents,
+    #weather-app-forecast {
+        max-width: 90%;
+        margin: 20px auto;
+        box-shadow: 0 10px 20px rgba(65, 50, 100, 0.08);
+        border-radius: 12px;
+        padding: 20px;
+        width: 90%;
+    }
 }
 
 
