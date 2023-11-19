@@ -2,29 +2,41 @@ h1 {
     text-align: center;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    background: radial-gradient(592px at 48.2% 50%, rgba(255, 255, 249, 0.6) 0%, rgb(160, 199, 254) 74.6%);
+
+}
+
+#weather-description {
+    text-transform: capitalize;
+    color: black;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 19px;
+    text-align: center;
+}
 
 
-.search-form {
+#search-form {
     padding: 20px;
     max-width: 600px;
     margin: 30px auto;
     text-align: center;
 }
 
-.search-form-input {
+#cityInput {
     border-radius: 20px;
-    box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
-    border-radius: 10px;
 }
 
-.weather-temperature {
-    font-size: 100px;
+
+.weather-app {
+    background-color: transparent;
+
 }
 
-#celsius {
-    text-align: center;
-    font-size: 88px;
-}
+
 
 #weather-app-contents {
     background: white;
@@ -42,14 +54,10 @@ h1 {
     box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
     border-radius: 16px;
     padding: 30px;
+    width: 80%;
+
 }
 
-
-
-#weather-app-icon {
-    width: 100px;
-    height: 100px;
-}
 
 .material-symbols-outlined {
     font-variation-settings:
@@ -71,22 +79,72 @@ h1 {
 
 }
 
-.humidity-text,
-.wind-text {
+#humidity-text,
+#wind-text {
+    color: #226EFD;
     margin-left: 5px;
 
 }
 
-.weather-temperature {
+
+#weather-temperature-max {
+    color: #226EFD;
+
+}
+
+#weather-temperature-mini {
+    color: #226EFD;
+    opacity: 0.6;
+}
+
+#weather-temperature {
+    font-size: 88px;
+}
+
+#weather-app-datetime {
+    font-size: 20px;
+}
+
+.weather-app-temperature-container {
     display: flex;
     align-items: center;
-}
-
-.weather-temperature span {
-    margin-right: 5px;
+    justify-content: center;
+    gap: 10px;
 
 }
 
-.weather-temperature-max {
-    opacity: 0.6;
+.weather-icon {
+    width: 50px;
+    height: auto;
+
+}
+
+.weather-temperature {
+    font-size: 24px;
+    line-height: 88px;
+    font-weight: bold;
+}
+
+.weather-unit {
+    margin-bottom: 23px;
+    font-size: 28px;
+}
+
+#weather-daily-icon {
+    width: 60px;
+    height: auto;
+}
+
+#weather-daily {
+    font-size: 20px;
+    margin-bottom: 24px;
+
+}
+
+#weather-feels {
+    color: #226EFD;
+}
+
+.my-info {
+    text-align: center;
 }

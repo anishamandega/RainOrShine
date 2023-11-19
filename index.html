@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RainOrShine🌦️</title>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -11,11 +12,17 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script
       src="https://kit.fontawesome.com/538f502076.js"
@@ -26,65 +33,92 @@
   <body>
     <div class="weather-app">
       <header>
-        <form class="search-form" id="search-form">
-          <input
-            clas="search-form-input"
-            type="search"
-            placeholder="Enter a city.."
-            required
-            id="search-form-input"
-            class="search-form-input"
-          />
-          <button type="submit" class="btn btn-primary" id="search-form-button">
-            <i class="fas fa-search"></i>
-          </button>
+        <form id="search-form" class="mb-3">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Enter a city name"
+                class="form-control"
+                id="search-input"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="col-1">
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <div class="col-1">
+              <button
+                type="submit"
+                class="btn btn-primary"
+                id="current-location"
+              >
+                <i class="fa-solid fa-location-dot"></i>
+              </button>
+            </div>
+          </div>
         </form>
       </header>
-    </div>
 
-    <div class="container text-center" id="weather-app-contents">
-      <h1>Cape Town, South Africa</h1>
-      <div class="row datetime justify-content-end">
-        <div class="col-4">
-          <span class="weather-app-datetime"> Sunday 23:14</span>
+      <div class="container text-center" id="weather-app-contents">
+        <h1 id="weather-city"></h1>
+        <span id="weather-app-datetime"></span>
+        <div id="weather-feels"></div>
+        <div class="weather-app-temperature-container">
+          <div id="weather-icon"></div>
+          <div id="weather-temperature"></div>
+          <div class="weather-unit">°C</div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-6" id="weather-icon"></div>
-        <div class="col-6 d-flex justify-content-end align-items-center">
-          <div class="weather-temperature">
-            <span>24</span>
-            <span id="celsius">°C</span>
+
+        <div class="col-12" id="weather-description"></div>
+        <hr />
+        <div class="row">
+          <div
+            class="col-6 d-flex align-items-center justify-content-center"
+            id="wind-info"
+          >
+            <span class="material-symbols-outlined" id="wind-icon">air</span>
+            Wind: <span id="wind-text"></span>
+          </div>
+
+          <div
+            class="col-6 d-flex align-items-center justify-content-center"
+            id="humidity"
+          >
+            <span class="material-symbols-outlined" id="humidity-icon"
+              >humidity_percentage</span
+            >
+            Humidity: <span id="humidity-text"></span>
           </div>
         </div>
-        <div class="col-12 weather-description">Rain</div>
       </div>
 
-      <hr />
-
-      <div class="row">
-        <div class="col-6" id="wind-info">
-          <span class="material-symbols-outlined" id="wind-icon">air</span>
-          <span class="wind-text">Wind: 3km/h</span>
-        </div>
-
-        <div class="col-6" id="humidity">
-          <span class="material-symbols-outlined" id="humidity-icon">
-            humidity_percentage
-          </span>
-          <span class="humidity-text">Humidity: 62% </span>
-        </div>
+      <div class="container text-center" id="weather-app-forecast">
+        <div>Forecast For 5 Days</div>
       </div>
     </div>
-    <div class="container text-center" id="weather-app-forecast">
-      <div class="row">
-        <div class="col-4">Tue</div>
-        <div class="col-4">🌦️</div>
-        <div class="col-4">
-          <span class="weather-temperature-mini">15° </span
-          ><span class="weather-temperature-max">25° </span>
-        </div>
-      </div>
+    <div class="my-info">
+      This project was coded by
+      <a href="https://github.com/anishamandega/" target="_blank">
+        Anisha Mandega</a
+      >, is
+      <a
+        href="https://github.com/anishamandega/Weather-App
+
+"
+        target="_blank"
+        >open-sourced on GitHub</a
+      >
+      and
+      <a
+        href="https://classy-kheer-129766.netlify.app/
+"
+        target="_blank"
+        >hosted on Netlify</a
+      >
     </div>
 
     <script src="src/index.js"></script>
